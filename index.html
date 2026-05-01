@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Agent Simulation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Controls at the top -->
+  <div class="controls">
+    <button id="startBtn">Start</button>
+    <button id="stopBtn">Stop</button>
+    <button id="resetBtn">Reset</button>
+    <button id="generateBtn">Generate Maze</button>
+    <button id="downloadBtn">Download Data</button>
+
+
+    <label>
+      Grid Complexity:
+      <input type="range" id="gridComplexity" min="3" max="50" value="10" />
+      <span id="gridComplexityValue">10</span>
+    </label>
+
+    <label>
+      Subtask Variety:
+      <input type="range" id="varietySlider" min="0" max="5" value="0" />
+      <span id="varietyValue">0</span>
+    </label>
+
+    <label>
+      Subtask Density (%):
+      <input type="range" id="subtaskDensitySlider" min="0" max="100" value="20" />
+      <span id="subtaskDensityValue">20</span>
+    </label>
+
+    <label>
+      Memory Length:
+      <input type="range" id="memorySlider" min="0" max="10" value="5" />
+      <span id="memoryValue">5</span>
+    </label>
+
+    <label>
+      Feedback Level:
+      <select id="feedbackLevel">
+        <option value="none">None</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+      </select>
+    </label>
+
+    <label>
+      AI Model:
+      <select id="modelSelect">
+        <option value="gpt-3.5-turbo">GPT-5-nano</option>
+        <option value="gpt-4">GPT-4</option>
+        <option value="gpt-4o-mini">GPT-4o Mini</option>
+      </select>
+    </label>
+
+    <div id="timer">Time: 00:00</div>
+  </div>
+
+  <!-- Grid below controls -->
+  <div id="gridContainer"></div>
+
+  <!-- Info panels below grid -->
+  <div id="infoPanel">
+    <div class="info-section">
+      <h3>🧠 Agent Thought</h3>
+      <div id="agentThought" class="info-box"></div>
+    </div>
+
+    <div class="info-section">
+      <h3>🕹️ Move History</h3>
+      <div id="moveHistory" class="info-box"></div>
+    </div>
+
+    <div class="info-section">
+      <h3>🤖 AI Response</h3>
+      <div id="aiResponse" class="info-box"></div>
+    </div>
+  </div>
+
+<script type="module" src="script.js"></script>
+
+</body>
+</html>

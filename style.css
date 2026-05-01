@@ -1,0 +1,112 @@
+/* Base styles */
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Control Panel */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+}
+
+/* Timer */
+#timer {
+  font-weight: bold;
+  font-size: 18px;
+  margin-left: 20px;
+}
+
+/* Grid Styles */
+#gridContainer {
+  display: grid;
+  gap: 1px;
+  margin-bottom: 20px;
+  border: 2px solid #222;
+}
+
+.grid-cell {
+  width: 30px;
+  height: 30px;
+  box-sizing: border-box;
+  background-color: white;
+  position: relative;
+  border: 1px solid #ccc;
+}
+
+.wall {
+  background-color: #222 !important;
+}
+
+.start {
+  background-color: #8ef !important;
+}
+
+.end {
+  background-color: #f88 !important;
+}
+
+.agent {
+  position: absolute;
+  top: 2px;
+  left: 5px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Subtask Colors */
+.subtask {
+  background-color: #ffd54f !important;
+}
+
+.subtask-a { background-color: #fffcbf !important; }
+.subtask-b { background-color: #b5ead7 !important; }
+.subtask-c { background-color: #fbc4ab !important; }
+.subtask-d { background-color: #fcd5ce !important; }
+.subtask-e { background-color: #e4c1f9 !important; }
+
+/* Info Panel */
+#infoPanel {
+  width: 90%;
+  max-width: 1000px;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.info-section {
+  flex: 1;
+}
+
+.info-section h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 3px;
+}
+
+.info-box {
+  background-color: #f9f9f9;
+  border: 1px solid #ccc;
+  padding: 8px;
+  height: 120px;
+  overflow-y: auto;
+  font-family: monospace;
+  font-size: 13px;
+  white-space: pre-wrap;
+}
