@@ -1,90 +1,129 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AI Agent Simulation</title>
+  <meta name="description" content="Horizon Consulting Group is a student led consulting organization focused on strategy, operations, product, and engineering informed problem solving." />
+  <title>Horizon Consulting Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <header class="site-header" id="top">
+    <nav class="nav-shell">
+      <a class="brand" href="#top" aria-label="Horizon Consulting Group home">
+        <span class="brand-mark">HCG</span>
+        <span>Horizon</span>
+      </a>
+      <button class="menu-button" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#work">Work</a>
+        <a href="#process">Process</a>
+        <a href="#principles">Principles</a>
+        <a class="nav-cta" href="#join">Join us</a>
+      </div>
+    </nav>
+  </header>
 
-  <!-- Controls at the top -->
-  <div class="controls">
-    <button id="startBtn">Start</button>
-    <button id="stopBtn">Stop</button>
-    <button id="resetBtn">Reset</button>
-    <button id="generateBtn">Generate Maze</button>
-    <button id="downloadBtn">Download Data</button>
+  <main>
+    <section class="hero section-pad">
+      <div class="hero-grid">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Michigan State University</p>
+          <h1>Sharp consulting for teams building what is next.</h1>
+          <p class="lead">Horizon Consulting Group helps founders, campus organizations, and community partners turn ambiguous problems into clear research, structured recommendations, and practical next steps.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#join">Get involved</a>
+            <a class="button button-secondary" href="#work">See what we do</a>
+          </div>
+        </div>
+        <div class="logo-panel reveal">
+          <div class="official-logo" aria-label="Official Horizon Consulting Group logo" role="img">
+            <div class="hcg-line"><span>H</span><span>C</span><span>G</span><i></i></div>
+            <div class="horizon-word">HORIZON</div>
+            <div class="consulting-word">CONSULTING GROUP</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <section class="section-pad" id="about">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Who we are</p>
+        <h2>A student led consulting group built around clarity, discipline, and real partner value.</h2>
+      </div>
+      <div class="about-grid">
+        <article class="glass-card reveal">
+          <p>Horizon brings together students interested in strategy, engineering, product, operations, analytics, and entrepreneurship. Members learn by doing real consulting work with real stakeholders.</p>
+          <p>We focus on professional development through live projects, structured training, mentorship, and a high standard for final deliverables.</p>
+        </article>
+        <div class="stat-grid reveal">
+          <div><strong>01</strong><span>Problem framing</span></div>
+          <div><strong>02</strong><span>Research and synthesis</span></div>
+          <div><strong>03</strong><span>Partner communication</span></div>
+          <div><strong>04</strong><span>Actionable deliverables</span></div>
+        </div>
+      </div>
+    </section>
 
-    <label>
-      Grid Complexity:
-      <input type="range" id="gridComplexity" min="3" max="50" value="10" />
-      <span id="gridComplexityValue">10</span>
-    </label>
+    <section class="section-pad dark-section" id="work">
+      <div class="section-heading reveal">
+        <p class="eyebrow">What we do</p>
+        <h2>Consulting work with enough structure to be useful and enough creativity to matter.</h2>
+      </div>
+      <div class="service-grid">
+        <article class="service-card reveal"><span>01</span><h3>Market research</h3><p>Competitive landscapes, customer discovery, industry scans, and opportunity sizing.</p></article>
+        <article class="service-card reveal"><span>02</span><h3>Product strategy</h3><p>Problem validation, user needs, prioritization, positioning, and roadmap support.</p></article>
+        <article class="service-card reveal"><span>03</span><h3>Operations improvement</h3><p>Workflow mapping, process redesign, dashboard planning, and execution systems.</p></article>
+        <article class="service-card reveal"><span>04</span><h3>Engineering strategy</h3><p>Technical feasibility, systems thinking, prototype planning, and implementation tradeoffs.</p></article>
+      </div>
+    </section>
 
-    <label>
-      Subtask Variety:
-      <input type="range" id="varietySlider" min="0" max="5" value="0" />
-      <span id="varietyValue">0</span>
-    </label>
+    <section class="section-pad" id="process">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Our process</p>
+        <h2>From vague question to clean recommendation.</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item reveal"><span>Discover</span><h3>Define the real problem</h3><p>We align on the partner need, key constraints, stakeholders, and project scope.</p></div>
+        <div class="timeline-item reveal"><span>Analyze</span><h3>Build the evidence base</h3><p>We gather data, run research, interview users, and identify patterns that matter.</p></div>
+        <div class="timeline-item reveal"><span>Recommend</span><h3>Create a clear direction</h3><p>We translate insight into options, tradeoffs, and a recommendation partners can act on.</p></div>
+        <div class="timeline-item reveal"><span>Deliver</span><h3>Leave momentum behind</h3><p>We close with polished deliverables, implementation steps, and a confident partner handoff.</p></div>
+      </div>
+    </section>
 
-    <label>
-      Subtask Density (%):
-      <input type="range" id="subtaskDensitySlider" min="0" max="100" value="20" />
-      <span id="subtaskDensityValue">20</span>
-    </label>
+    <section class="section-pad principles-section" id="principles">
+      <div class="principles-card reveal">
+        <p class="eyebrow">Constitution aligned principles</p>
+        <h2>We want the organization to feel professional from the inside out.</h2>
+        <div class="principles-grid">
+          <article><h3>Integrity</h3><p>We communicate honestly, protect partner trust, and represent our work responsibly.</p></article>
+          <article><h3>Excellence</h3><p>We hold a high bar for analysis, design, storytelling, and final recommendations.</p></article>
+          <article><h3>Development</h3><p>We create opportunities for members to learn consulting through practice and feedback.</p></article>
+          <article><h3>Service</h3><p>We use our skills to support partners, campus, and the broader community.</p></article>
+        </div>
+      </div>
+    </section>
 
-    <label>
-      Memory Length:
-      <input type="range" id="memorySlider" min="0" max="10" value="5" />
-      <span id="memoryValue">5</span>
-    </label>
+    <section class="section-pad join-section" id="join">
+      <div class="join-card reveal">
+        <p class="eyebrow">Join Horizon</p>
+        <h2>For students who like clean thinking and hard problems.</h2>
+        <p>Bring curiosity, ownership, and the willingness to improve. We will bring the structure, projects, and standards.</p>
+        <a class="button button-primary" href="mailto:topranid@msu.edu?subject=Horizon%20Consulting%20Group%20Interest">Contact the team</a>
+      </div>
+    </section>
+  </main>
 
-    <label>
-      Feedback Level:
-      <select id="feedbackLevel">
-        <option value="none">None</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-      </select>
-    </label>
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Horizon Consulting Group. Built for clarity and momentum.</p>
+  </footer>
 
-    <label>
-      AI Model:
-      <select id="modelSelect">
-        <option value="gpt-3.5-turbo">GPT-5-nano</option>
-        <option value="gpt-4">GPT-4</option>
-        <option value="gpt-4o-mini">GPT-4o Mini</option>
-      </select>
-    </label>
-
-    <div id="timer">Time: 00:00</div>
-  </div>
-
-  <!-- Grid below controls -->
-  <div id="gridContainer"></div>
-
-  <!-- Info panels below grid -->
-  <div id="infoPanel">
-    <div class="info-section">
-      <h3>🧠 Agent Thought</h3>
-      <div id="agentThought" class="info-box"></div>
-    </div>
-
-    <div class="info-section">
-      <h3>🕹️ Move History</h3>
-      <div id="moveHistory" class="info-box"></div>
-    </div>
-
-    <div class="info-section">
-      <h3>🤖 AI Response</h3>
-      <div id="aiResponse" class="info-box"></div>
-    </div>
-  </div>
-
-<script type="module" src="script.js"></script>
-
+  <script src="script.js"></script>
 </body>
 </html>
